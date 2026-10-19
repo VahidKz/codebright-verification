@@ -1,0 +1,2 @@
+input_k_m2,recovered_k_m2,relative_k_error,input_phi_ct_1_pa,recovered_phi_ct_1_pa,relative_storage_error,fit_start_s,fit_end_s
+1e-13,1.002091104998901e-13,0.00209110499890075,1.5e-10,1.485829117320411e-10,0.009447255119726217,376984.3450683884,2592000
