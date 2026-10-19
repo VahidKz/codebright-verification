@@ -1,0 +1,11 @@
+*.asv
+*.mex*
+octave-workspace
+.DS_Store
+Thumbs.db
+*.exe
+*.dll
+*.zip
+*.pdf
+.env
+local-runs/

@@ -1,0 +1,25 @@
+name: MATLAB-compatible Octave verification
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  octave:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Install GNU Octave and headless graphics
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends octave gnuplot-nox ghostscript fonts-freefont-otf
+      - run: octave --no-gui --quiet --eval "run_all_tests"
+      - run: octave --no-gui --quiet --eval "run_all"
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: measured-verification-results
+          path: |
+            */figures/*.png
+            */results/*.csv
+            results/*.csv
