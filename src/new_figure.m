@@ -2,5 +2,8 @@ function handle = new_figure()
 % NEW_FIGURE Invisible, consistent scientific figure for both runtimes.
 % Input: none. Output: figure handle. Reference: infrastructure only.
     handle = figure('visible', 'off', 'color', 'w', 'position', [80 80 1000 680]);
-    set(0, 'defaultaxesfontsize', 11, 'defaultlinelinewidth', 1.5);
+    set(handle, 'defaultaxesfontsize', 11, 'defaultlinelinewidth', 2, ...
+        'defaultaxesgridcolor', [0.82 0.85 0.88], 'defaultaxesgridalpha', 1, ...
+        'defaultaxescolororder', [0.05 0.30 0.58; 0.76 0.22 0.12; 0.35 0.18 0.55; ...
+        0.00 0.48 0.41; 0.62 0.39 0.02; 0.50 0.22 0.38; 0.25 0.32 0.37]);
 end

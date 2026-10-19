@@ -17,6 +17,15 @@ function test_03_theis()
     fit = cooper_jacob_fit(result.time(window),numerical(2,window),100,p.q,p.mu,p.h);
     assert(abs(fit.k/p.k-1) < 0.02);
     assert(abs(fit.phi_ct/(p.phi*p.ct)-1) < 0.02);
+    small = p; small.R = 50; small.tmax = 1e4;
+    leakage = radial_diffusion_fv(small,80,1.05);
+    assert(leakage.outer_outflow(end) > 0.1*leakage.injected(end));
+    assert(leakage.mass_error < 1e-10);
+    small.q = -p.q; extraction = radial_diffusion_fv(small,80,1.05);
+    assert(max(abs(extraction.pressure(:)+leakage.pressure(:))) < 1e-8);
+    small.q = 0; zero = radial_diffusion_fv(small,20,1.1);
+    assert(all(zero.pressure(:) == 0) && zero.mass_error == 0);
+    assert(theis_pressure(10,0,p.k,p.phi,p.mu,p.ct,p.h,p.q) == 0);
     assert_throws(@() theis_pressure(0,1,p.k,p.phi,p.mu,p.ct,p.h,p.q));
     assert_throws(@() radial_diffusion_fv(p,10,1));
 end

@@ -15,11 +15,18 @@ function test_02_fracture()
     assert(max(abs(finite_difference./tangent-1)) < 1e-6);
     assert(aperture_exponential(0,b0,5e-6,0.2e-6) == b0);
     assert(abs(aperture_exponential(1e12,b0,5e-6,0.2e-6)-5e-6) < 1e-15);
+    stress_sweep = linspace(0,30e6,101);
+    exp_aperture = aperture_exponential(stress_sweep,b0,5e-6,0.2e-6);
+    bb_aperture = aperture_barton_bandis(stress_sweep,b0,Vm,Kni);
+    assert(all(diff(exp_aperture) < 0) && all(exp_aperture >= 5e-6 & exp_aperture <= b0));
+    assert(all(diff(bb_aperture) < 0) && all(bb_aperture >= b0-Vm & bb_aperture <= b0));
+    assert(all(diff(normal_stiffness_barton_bandis(stress_sweep,Vm,Kni)) > 0));
     Q = cubic_law_flow(1e-4,1,1e-3,-1000);
     assert(abs(Q-8.33333333333333e-8) < 1e-20);
     assert(abs(cubic_law_flow(2e-4,1,1e-3,-1000)/Q-8) < 1e-12);
     assert(cubic_law_flow(1e-4,1,1e-3,0) == 0);
     assert(cubic_law_flow(1e-4,1,1e-3,1000) < 0);
     assert_throws(@() aperture_barton_bandis(-1,b0,Vm,Kni));
+    assert_throws(@() aperture_exponential(-1,b0,5e-6,0.2e-6));
     assert_throws(@() cubic_law_flow(0,1,1e-3,-1000));
 end

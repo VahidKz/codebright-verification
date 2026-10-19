@@ -15,7 +15,9 @@ function metrics = compare_codebright(root, p, make_plots)
     text = fileread(provenance_path);
     for field = {'Operator:','Run date:','CODE_BRIGHT version:','GiD version:','Mesh:', ...
             'Time stepping:','Parameters and units:','Initial pressure reference:'}
-        assert(~isempty(strfind(text,field{1})),['Missing provenance field ',field{1}]);
+        entry = regexp(text,['(?m)^',field{1},'([^\r\n]*)'],'tokens','once');
+        assert(~isempty(entry) && ~isempty(strtrim(entry{1})),['Missing provenance field ',field{1}]);
+        assert(isempty(strfind(entry{1},'[required]')),'Complete the provenance template before comparison.');
     end
     data = read_numeric_csv(pressure_path,'time_s,depth_m,excess_pressure_pa,reference_initial_pressure_pa');
     settlement = read_numeric_csv(settlement_path,'time_s,settlement_m');

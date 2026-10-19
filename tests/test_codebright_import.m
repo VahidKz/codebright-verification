@@ -19,4 +19,13 @@ function test_codebright_import()
     status = compare_codebright(root,p,false);
     assert(status.pressure_max_normalized_error < 1e-12);
     assert(status.settlement_max_normalized_error < 1e-12);
+    file = fopen(fullfile(folder,'results','settlement.csv'),'w');
+    fprintf(file,'time_s,settlement_m\n1,not_a_number\n'); fclose(file);
+    assert_throws(@() compare_codebright(root,p,false));
+    file = fopen(fullfile(folder,'results','settlement.csv'),'w');
+    fprintf(file,'time_s,settlement_m\n'); fclose(file);
+    assert_throws(@() compare_codebright(root,p,false));
+    file = fopen(fullfile(folder,'run_provenance.md'),'w');
+    fprintf(file,'Operator: [required]\n'); fclose(file);
+    assert_throws(@() compare_codebright(root,p,false));
 end
