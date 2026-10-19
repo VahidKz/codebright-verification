@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please cite this software and the original scientific references listed in the module READMEs."
+title: "Consolidation, fracture flow, and radial injection verification benchmarks"
+type: software
+authors:
+  - family-names: Keshavarz
+    given-names: Vahid
+url: 'https://github.com/VahidKz/codebright-verification'
+license: MIT

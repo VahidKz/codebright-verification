@@ -42,7 +42,7 @@ Tested locally with **GNU Octave 10.3.0** on Linux, using gnuplot for headless P
 
 All parameters are **illustrative, not calibrated**. This is code verification against idealized equations, not validation against experiments. The fracture module prescribes normal stress and fluid pressure; it does not solve fully coupled poroelastic mechanics. No fracture networks, propagation, shear, geochemistry, thermal effects, or induced-seismicity prediction are implemented. Module READMEs state discretization and constitutive limitations.
 
-For equations, see the module READMEs; for implementation explanations and questions, see the [physics walkthrough](docs/PHYSICS_WALKTHROUGH.md) and [interview practice](docs/INTERVIEW_PRACTICE.md). The [review record](docs/REVIEW.md) records verification scope and outstanding evidence.
+Equations, parameter units, numerical methods, and limitations are documented in each module README. [Cite this software](CITATION.cff) when reusing the implementation.
 
 Primary references: [Terzaghi (1943)](https://doi.org/10.1002/9780470172766), [Bandis et al. (1983)](https://doi.org/10.1016/0148-9062(83)90595-8), [Witherspoon et al. (1980)](https://doi.org/10.1029/WR016i006p01016), [Theis (1935)](https://doi.org/10.1029/TR016i002p00519), [Cooper & Jacob (1946)](https://doi.org/10.1029/TR027i004p00526), and the [official CODE_BRIGHT documentation](https://deca.upc.edu/en/projects/code_bright). Additional context appears in each module.
 
