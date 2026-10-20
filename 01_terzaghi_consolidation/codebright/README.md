@@ -1,5 +1,7 @@
 # CODE_BRIGHT comparison: pending genuine run
 
+An [official equilibrium example has been executed separately](../../codebright_run/README.md). This folder concerns the own Terzaghi column, whose comparison still requires a matching hydro-mechanical model and exports.
+
 **No CODE_BRIGHT model or output is present.** This folder provides a planned physical specification and a tested comparison interface. It is not evidence of software installation or a successful CODE_BRIGHT calculation. No element types, menu paths, parameter identifiers, versions, or solver behavior are invented here.
 
 Obtain GiD and CODE_BRIGHT from the [official UPC/CIMNE site](https://deca.upc.edu/en/projects/code_bright) and [downloads page](https://deca.upc.edu/en/projects/code_bright/downloads). Follow the documentation matching the installed versions; run the first official tutorial unchanged and retain an original screenshot. Do not redistribute the downloaded tutorials, manuals, binaries, or runtime libraries in this repository.

@@ -1,3 +1,5 @@
 */figures/*.png binary
 */results/*.csv linguist-generated=true
 results/*.csv linguist-generated=true
+codebright_run/figure.png binary
+codebright_run/results/*.json linguist-generated=true

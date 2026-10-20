@@ -1,0 +1,6 @@
+Total accumulated cputime:    0.312500E+00
+ Cputime solver only      :    0.000000E+00
+ Ratio solver/total       :    0.000000E+00
+ Total number of N-R iterations (ntiter):           2074
+ Total number of time steps (int)       :           2074
+ Ratio iterations per time step         : 1.00

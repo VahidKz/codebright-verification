@@ -8,4 +8,5 @@ function root = setup_paths()
     addpath(fullfile(root, '01_terzaghi_consolidation'));
     addpath(fullfile(root, '02_fracture_aperture_cubic_law'));
     addpath(fullfile(root, '03_radial_injection_theis'));
+    addpath(fullfile(root, 'codebright_run'));
 end

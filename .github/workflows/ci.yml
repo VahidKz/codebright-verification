@@ -24,3 +24,6 @@ jobs:
             */results/*.csv
             results/*.csv
             results/*.txt
+            codebright_run/figure.png
+            codebright_run/results/*.json
+            codebright_run/results/*.txt

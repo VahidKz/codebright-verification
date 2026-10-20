@@ -9,7 +9,7 @@ function metrics = compare_codebright(root, p, make_plots)
     settlement_path = fullfile(folder,'results','settlement.csv');
     provenance_path = fullfile(folder,'run_provenance.md');
     supplied = [exist(pressure_path,'file') == 2,exist(settlement_path,'file') == 2,exist(provenance_path,'file') == 2];
-    metrics.status = 'PENDING: no genuine CODE_BRIGHT exports supplied';
+    metrics.status = 'PENDING: no Terzaghi CODE_BRIGHT exports supplied';
     if ~any(supplied), return; end
     assert(all(supplied),'Partial CODE_BRIGHT evidence: supply both CSV files and run_provenance.md.');
     text = fileread(provenance_path);

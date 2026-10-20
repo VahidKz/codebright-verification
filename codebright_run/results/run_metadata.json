@@ -1,0 +1,27 @@
+{
+    "case_name":  "Ex_CHE_MECH_eq_CB26_02",
+    "run_started_utc":  "2026-10-20T05:52:32.4985518Z",
+    "run_finished_utc":  "2026-10-20T05:52:32.9418043Z",
+    "execution":  "Native Windows command-line CODE_BRIGHT; no GiD session",
+    "package":  "CODE_BRIGHT_2026_10.gid from UPC official 2026 download",
+    "example_source":  "https://deca.upc.edu/en/projects/code_bright/downloads/other-examples/2026-geochemistry/chemech/examples_chemech_cb26_02.zip",
+    "solver_sha256":  "a04ba941accf6bbbc00b93c8b70365e164b51d564d3a2a37cb90c8c0e90d74e0",
+    "example_archive_sha256":  "ef07758fc6e4a554d2332478414b65ef430578329801164cb51371555f8f2007",
+    "openmp_runtime_sha256":  "b0d2c2beac01b5c2d0f74912cb3e5bc50ab0b060d9d5ceb62b76fdfa690ceec5",
+    "input_sha256":  {
+                         "Ex_CHE_MECH_eq_CB26_02_chem.dat":  "6c1493b4b4a4debc792192cfa3bf51d8a52e1d71ee8c8ad7d1c6100777f1eae8",
+                         "Ex_CHE_MECH_eq_CB26_02_chem_ini.dat":  "5984b68ee6d400c60cb0a7f90c5d8eefed9683c9121a7f2b3e165ddd88ff5492",
+                         "Ex_CHE_MECH_eq_CB26_02_gen.dat":  "8dabd7e75d7d939d94b575ad9d8f6e8b9103cdeea047406c29bbb71d52c51b9a",
+                         "Ex_CHE_MECH_eq_CB26_02_gri.dat":  "584e6b28165433d5926f8ea2f15aede39ff6ec107b909b0d3777bfdb8575af91",
+                         "key.dat":  "9bebb23f73cee6459e102a8d536829d042f436070c503a47a5cebfc32d5b83e6",
+                         "root.dat":  "fa054c0dd896b06c2009920ea93ee2ddab6d91d37526eb31e68e469ddf1e185c"
+                     },
+    "exit_code":  0,
+    "stderr_bytes":  0,
+    "time_steps":  2074,
+    "final_time_s":  720000000,
+    "threads":  1,
+    "result_sha256":  "ba29d16081cb3125776868b2b8f15e8eee2e2e2393d9373e67cf26d71d11bc5d",
+    "distributed_reference_sha256":  "ba29d16081cb3125776868b2b8f15e8eee2e2e2393d9373e67cf26d71d11bc5d",
+    "matches_distributed_reference":  true
+}
